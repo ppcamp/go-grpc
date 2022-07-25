@@ -3,6 +3,7 @@ module github.com/ppcamp/go-grpc
 go 1.18
 
 require (
+	github.com/sirupsen/logrus v1.9.0
 	golang.org/x/net v0.0.0-20220708220712-1185a9018129
 	google.golang.org/grpc v1.48.0
 )
