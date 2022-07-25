@@ -22,7 +22,7 @@ func UnaryInterceptor(aservice AuthenticationService) grpc.UnaryServerIntercepto
 
 		token, err := jwtFromHeader(ctx)
 
-		if errors.Is(err, ErrMissingBearer) {
+		if errors.Is(err, wrappers.ErrFieldNotFound) {
 			// check if the endpoint is protected or not
 			if !aservice.Allow(info.FullMethod) {
 				return nil, status.Errorf(codes.Unauthenticated, "protected endpoint: %w", err)
