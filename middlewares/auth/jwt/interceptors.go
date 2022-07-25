@@ -58,7 +58,7 @@ func StreamInterceptor(aservice AuthenticationService) grpc.StreamServerIntercep
 
 		token, err := jwtFromHeader(ctx)
 
-		if errors.Is(err, ErrMissingBearer) {
+		if errors.Is(err, wrappers.ErrFieldNotFound) {
 			// check if the endpoint is protected or not
 			if !aservice.Allow(info.FullMethod) {
 				return status.Errorf(codes.Unauthenticated, "protected endpoint: %w", err)
