@@ -7,7 +7,6 @@ import (
 // LogrusLogger implements the V method of the grpclog for the *logrus.Entry
 //
 // Example
-//	log := logrus.StandardLogger()
 // 	log := logrus.StandardLogger()
 // 	log.SetLevel(logrus.DebugLevel)
 // 	log.SetFormatter(

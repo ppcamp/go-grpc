@@ -1,3 +1,4 @@
-package jwt
+// Jwt package provides an interceptor to retrieve and parse the JWT bearer token from the metadata
+// hTTP (request).
 
-// Jwt package provides an interceptor
+package jwt
