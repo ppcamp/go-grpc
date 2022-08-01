@@ -36,7 +36,7 @@ func UnaryInterceptor(n uint64) grpc.UnaryServerInterceptor {
 	}
 }
 
-// UnaryInterceptor implements a gRPC middleware that allows n requests before starts rejecting.
+// StreamInterceptor implements a gRPC middleware that allows n requests before starts rejecting.
 // The interceptor is threadsafe (uses atomic operations).
 func StreamInterceptor(n uint64) grpc.StreamServerInterceptor {
 	c := uint64(0)
